@@ -1,5 +1,5 @@
-let umur = 18;
-function ulangTahun(){
-	return umur += 1;
+let maxVerstappen = 255;
+function poin(){
+	return maxVerstappen += 175;
 }
-console.log(ulangTahun());
+console.log(poin());
