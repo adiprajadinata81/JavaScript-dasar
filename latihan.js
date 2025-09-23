@@ -1,5 +1,5 @@
-let maxVerstappen = 255;
+let oscarPiastri = 324;
 function poin(){
-	return maxVerstappen += 175;
+	return oscarPiastri += 175;
 }
 console.log(poin());
