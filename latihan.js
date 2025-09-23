@@ -1,5 +1,5 @@
-let pembalap1 = "Oscar piastri = "
-let pembalap2 = "Max Verstappen = "
+let pembalap1 = "oscarPiastri dengan poin : ";
+let pembalap2 = "MaxVerstappen dengan poin : ";
 
 let oscarPiastri = 324;
 function poin1(){
