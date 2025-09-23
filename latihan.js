@@ -1,4 +1,5 @@
-let nama = function(){
-	return "Adi prajadinata | Programmer";
+let umur = 18;
+function ulangTahun(){
+	return umur += 1;
 }
-console.log(nama());
+console.log(ulangTahun());
