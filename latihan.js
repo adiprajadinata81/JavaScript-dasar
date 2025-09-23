@@ -1,3 +1,3 @@
 let maxVerstappen = "juara";
-let poin = maxVerstappen === "juara" ? "iya" : "Tidak";
-console.log(poin);
+let juaraDunia = maxVerstappen === "juara" ? "maxVerstappen berhasil juara dunia" : "maxVerstappen gagal juara dunia";
+console.log(juaraDunia);
