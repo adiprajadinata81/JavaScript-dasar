@@ -1,3 +1,4 @@
-let maxVerstappen = "juara";
-let juaraDunia = maxVerstappen === "juara" ? "maxVerstappen berhasil juara dunia" : "maxVerstappen gagal juara dunia";
-console.log(juaraDunia);
+function bilangan(angka1, angka2){
+	return angka1 * angka2;
+}
+console.log(bilangan(3, 3));
