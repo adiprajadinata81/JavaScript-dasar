@@ -1,4 +1,4 @@
-function bilangan(angka1, angka2){
-	return angka1 * angka2;
+function luasPersegi(sisi, sisi){
+	return sisi * sisi;
 }
-console.log(bilangan(3, 3));
+console.log(luasPersegi(2, 2));
