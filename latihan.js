@@ -1,3 +1,3 @@
-let makanan = "daging";
-let jenisHewan = makanan === "sayuran"  ? "karnivora" : "herbivora";
-console.log(jenisHewan);
+let x = 3;
+let comparison = x == "3";
+console.log(comparison);
