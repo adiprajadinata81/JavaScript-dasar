@@ -1,4 +1,7 @@
-let nama = function(){
-	return "Adi Prajadinata";
+function bagi(angka1, angka2){
+let hasil = angka1 / angka2;
+return hasil;
 }
-console.log(nama());
+
+let jumlah = bagi(10, 5);
+console.log(jumlah);
