@@ -1,5 +1,4 @@
-function theWall(){
-	return "high wall";
+function nama(){
+	return "adi prajadinata";
 }
-console.log(theWall());
-
+console.log(nama());
