@@ -1,3 +1,3 @@
 let makanan = "daging";
-let jenisHewan = makanan === "daging"  ? "karnivora" : "herbivora";
+let jenisHewan = makanan === "sayuran"  ? "karnivora" : "herbivora";
 console.log(jenisHewan);
