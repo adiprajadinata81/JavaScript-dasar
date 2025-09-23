@@ -1,5 +1,5 @@
 function tambah(angka1, angka2){
-	let hasil = angka1 + angka2);
+	let hasil = angka1 + angka2;
 return hasil;
 }
 
