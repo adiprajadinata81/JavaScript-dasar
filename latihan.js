@@ -1,14 +1,13 @@
-let pembalap1 = "oscarPiastri dengan poin : ";
-let pembalap2 = "MaxVerstappen dengan poin : ";
+let oscarPiastri = "oscarPiastri dengan poin :";
+let maxVerstappen = "maxVerstappen dengan poin :";
 
-let oscarPiastri = 324;
-function poin1(){
-	return oscarPiastri += 175;
+let pembalap1 = function(){
+	return 324 + 175;
 }
 
-let maxVerstappen = 255;
-function poin2(){
-	return maxVerstappen += 175;
+let pembalap2 = function(){
+	return 255 + 175;
 }
-console.log(pembalap1 + poin1());
-console.log(pembalap2 + poin2());
+
+console.log(oscarPiastri + pembalap1());
+console.log(maxVerstappen + pembalap2());
