@@ -1,12 +1,12 @@
-let orang = {
- nama: 'adi',
+let orang {
+ nama: 'Adi',
  umur: 18,
  pekerjaan: null
 };
 
-let motor = new Object();
- motor.merk = 'honda';
- motor.warna = 'hitam';
- motor.tipe = 'vario';
-
+let motor = new Object = {
+ merk: 'honda';
+ tipe: 'vario';
+ warna: 'hitam';
+}
 
