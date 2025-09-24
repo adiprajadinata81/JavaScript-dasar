@@ -1,4 +1,5 @@
-function nama(){
-	return 'adi ';
+let nama = 'Adi ';
+function namaBelakang(){
+	return 'Prajadinata ';
 }
-console.log(nama());
+console.log(nama + namaBelakang());
