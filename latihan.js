@@ -22,6 +22,11 @@ function pembalapMclaren(){
  return 'nama Pembalap adalah ' + no81 + ' ' + 'dengan poin sebanyak 324 ';
 }
 
+
+let pembalapF1 = 'juara';
+let poin = pembalapF1 === 'juara' ? 'maxVerstappen' : 'oscarPiastri';
+
+console.log(poin);
 console.log(pembalapMclaren());
 console.log(kalimat + namaPembalap() + kalimat2);
 console.log(sport);
