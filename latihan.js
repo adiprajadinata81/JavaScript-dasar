@@ -4,4 +4,9 @@ let orang = {
  pekerjaan: null
 };
 
-console.log(orang);
+let motor = new Object();
+ motor.merk = 'honda';
+ motor.warna = 'hitam';
+ motor.tipe = 'vario';
+
+
