@@ -1,4 +1,6 @@
 const sport = 'formula1';
+let kalimat = 'nama Pembalap Adalah ';
+let kalimat2 = 'mempunyai Poin Balap sebanyak 255 ';
 
 function namaPembalap(){
  let pembalap = 'oscarPiastri';
@@ -12,5 +14,5 @@ function namaPembalap(){
  }
  return pembalap;
 }
-console.log(namaPembalap());
+console.log(kalimat + namaPembalap() + kalimat2);
 console.log(sport);
