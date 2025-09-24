@@ -1,3 +1,2 @@
-function luasPersegi(s){
-	return s * s;
-}
+const nama = "Adi Prajadinata";
+
