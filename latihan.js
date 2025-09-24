@@ -1,16 +1,15 @@
 const olahraga = 'basketball';
-
+let nomorPunggung = 'nomor Punggung saya adalah ';
 function namaAtlet(){
  let atlet = 'lionelMessi';
  const noMessi = 10;
- console.log(olahraga);
 
 if(olahraga === 'basketball'){
  atlet = 'kobeBryant';
  const noKobe = 24;
- console.log(olahraga);
+ console.log(nomorPunggung + noKobe);
  }
 return atlet;
 }
 console.log(namaAtlet());
-console.log(olahraga);
+
