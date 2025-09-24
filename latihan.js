@@ -1,2 +1,3 @@
-const nama = "oscarPiastri";
-console.log(nama);
+const bilangan = 8;
+bilangan += 1;
+console.log(bilangan);
