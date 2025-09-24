@@ -1,2 +1,2 @@
-const nama = "Adi Prajadinata";
+const nama = "oscarPiastri";
 console.log(nama);
