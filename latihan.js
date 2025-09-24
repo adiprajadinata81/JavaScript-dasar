@@ -7,10 +7,10 @@ function namaAtlet(){
 
 	if(olahraga === 'basketball'){
 		atlet = 'kobeBryant';
-		const = 24;
+		const noKobe = 24;
 		console.log(olahraga);
 	}
-	return atlet;
+	
 }
 console.log(namaAtlet());
 console.log(olahraga);
