@@ -1,5 +1,5 @@
-let nama = 'Adi ';
-function namaBelakang(){
-	return 'Prajadinata ';
+let namaBelakang = 'Prajadinata ';
+function nama(){
+	return 'Adi ';
 }
-console.log(nama + namaBelakang());
+console.log(nama() + namaBelakang);
