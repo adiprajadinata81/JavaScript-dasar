@@ -1,7 +1,7 @@
 const olahraga = 'basketball';
 
 function namaAtlet(){
-	let atlet = 'lionelMessi';
+	let atlet === 'lionelMessi';
 	const noMessi = 10;
 	console.log(olahraga);
 
@@ -10,6 +10,7 @@ function namaAtlet(){
 		const noKobe = 24;
 		console.log(olahraga);
 	}
+	return atlet;
 	
 }
 console.log(namaAtlet());
