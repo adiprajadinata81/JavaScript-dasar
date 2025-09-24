@@ -7,4 +7,8 @@ let orang = {
 let motor = new Object();
 nama: 'vario';
 tipe:'matic';
-warna: 'hitam'; 
+warna: 'hitam';
+
+let saya = new Object();
+nama: 'adi';
+umur: 18;
