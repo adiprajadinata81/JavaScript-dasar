@@ -1,12 +1,10 @@
 let orang = {
- nama: 'Adi',
- umur: 18,
- pekerjaan: null
+	nama: 'adi',
+	umur: 18,
+	pekerjaan: 'programming'
 };
 
-let motor = new Object()
- merk: 'honda';
- tipe: 'vario';
- warna: 'hitam';
-
-
+let motor = new Object();
+nama: 'vario';
+tipe:'matic';
+warna: 'hitam'; 
