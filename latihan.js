@@ -8,11 +8,20 @@ function namaPembalap(){
  console.log(sport);
 
  if(sport === 'formula1'){
- pembalap = 'maxVerstappen';
+ pembalap = 'maxVerstappen ';
  const noMax = '1';
  console.log(sport);
  }
  return pembalap;
 }
+
+
+let no81 = 'oscarPiastri';
+
+function pembalapMclaren(){
+ return 'nama Pembalap adalah ' + no81 + ' ' + 'dengan poin sebanyak 324 ';
+}
+
+console.log(pembalapMclaren());
 console.log(kalimat + namaPembalap() + kalimat2);
 console.log(sport);
