@@ -13,7 +13,7 @@ if(olahraga === 'basketball'){
  console.log(nomorPunggung + noKobe);
  console.log(nama + atlet);
  }
-return atlet;
+ return atlet;
 }
 console.log(namaAtlet());
 
