@@ -1,3 +1,14 @@
-let tertawa = 'tapiTerluka';
-let apakahTerluka = tertawa === 'tapiTerluka' ? 'Tertawa Tapi Terluka' : 'Tertawa';
-console.log(apakahTerluka);
+const olahraga = 'basketball';
+
+function namaAtlet(){
+ let atlet = 'lionelMessi';
+ const noMessi = 10;
+ 
+ if(olahraga === 'basketball'){
+ atlet = 'kobeBryant';
+ const noKobe = 24;
+ }
+ return atlet;
+}
+console.log(namaAtlet());
+console.log(olahraga);
