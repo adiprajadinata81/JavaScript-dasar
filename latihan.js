@@ -1,3 +1,2 @@
-const bilangan = 8;
-bilangan += 1;
-console.log(bilangan);
+const bilangan1 = 9;
+console.log(bilangan1);
