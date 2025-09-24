@@ -1,2 +1,7 @@
-const bilangan1 = 9;
-console.log(bilangan1);
+const olahraga = 'basketball';
+
+function namaAtlet(){
+	let atlet = 'lionelMessi';
+	const noMessi = 10;
+	console.log(olahraga);
+}
