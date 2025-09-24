@@ -1,4 +1,6 @@
 const olahraga = 'basketball';
+let atlet = 'nama atlet ';
+let namaOlahraga = 'olahraga Yang Ditekuni ';
 
 function namaAtlet(){
  let atlet = 'lionelMessi';
@@ -10,5 +12,5 @@ function namaAtlet(){
  }
  return atlet;
 }
-console.log(namaAtlet());
-console.log(olahraga);
+console.log(atlet + namaAtlet());
+console.log(namaOlahraga + olahraga);
