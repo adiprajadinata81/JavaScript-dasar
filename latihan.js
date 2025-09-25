@@ -1,8 +1,9 @@
 let identitas = 'Nama saya ';
 let umur = 'umur saya ';
+let tahun = ' Tahun ';
 let orang = {
 	nama: 'adi ',
-	umur: 18,
+	umur: 18 ,
 	pekerjaan: 'programming'
 };
 
@@ -13,6 +14,6 @@ warna: 'hitam';
 
 let saya = new Object();
 nama: 'adi';
-umur: 18;
+umur: 18 ;
 
-console.log(identitas + orang.nama + umur + orang.umur);
+console.log(identitas + orang.nama + umur + orang.umur + tahun);
