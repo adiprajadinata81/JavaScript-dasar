@@ -1,5 +1,7 @@
+let identitas = 'Nama saya ';
+let umur = 'umur saya ';
 let orang = {
-	nama: 'adi',
+	nama: 'adi ',
 	umur: 18,
 	pekerjaan: 'programming'
 };
@@ -12,3 +14,5 @@ warna: 'hitam';
 let saya = new Object();
 nama: 'adi';
 umur: 18;
+
+console.log(identitas + orang.nama + umur + orang.umur);
