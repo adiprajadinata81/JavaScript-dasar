@@ -1,4 +1,4 @@
-function nama(){
-	return 'Adi Prajadinata';
+let nama = function(){
+	return 'adi prajadinata';
 }
 console.log(nama());
