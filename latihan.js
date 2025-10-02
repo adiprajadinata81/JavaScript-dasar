@@ -1,4 +1,3 @@
-let nama = function(){
-	return 'adi prajadinata';
-}
-console.log(nama());
+let makanan = 'daging';
+let hewan = makanan === 'daging' ? 'herbivora' : 'karnivora';
+console.log(hewan);
