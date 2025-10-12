@@ -1,10 +1,16 @@
-let kucing = {
-	kaki: 4,
-	lucu: true
-};
+const olahraga = 'basketball';
+function namaAtlet(){
+	let atlet = 'lionenMessi';
+	const noMessi = '10';
+	console.log(olahraga);
 
-kucing.suara = function suaraKucing(){
-	return 'Meong';
+	if(olahraga === 'basketball'){
+	atlet = 'kobeBryant';
+	const noKobe = 24;
+	console.log(olahraga);
+	};
+	return atlet;
 };
-console.log(kucing);
-console.log(kucing.suara());
+console.log(namaAtlet());
+console.log(olahraga);
+
