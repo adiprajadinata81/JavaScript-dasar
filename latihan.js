@@ -1,16 +1,5 @@
-const olahraga = 'basketball';
-function namaAtlet(){
-	let atlet = 'lionenMessi';
-	const noMessi = '10';
-	console.log(olahraga);
-
-	if(olahraga === 'basketball'){
-	atlet = 'kobeBryant';
-	const noKobe = 24;
-	console.log(olahraga);
-	};
-	return atlet;
+const kucing = {
+	suara: 'guk guk',
+	kaki: 4
 };
-console.log(namaAtlet());
-console.log(olahraga);
-
+console.log(kucing.suara);
