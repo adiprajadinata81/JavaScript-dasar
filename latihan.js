@@ -1,4 +1,6 @@
-function kucing(){
-	return 'Meong';
+const olahraga = 'basketball';
+function namaAtlet(){
+	let atlet = 'lionelMessi';
+	const noMessi = 10;
+	console.log(olahrag);
 }
-console.log(kucing());
