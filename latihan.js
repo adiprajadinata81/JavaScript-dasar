@@ -1,5 +1,4 @@
-const kucing = {
-	suara: 'guk guk',
-	kaki: 4
-};
-console.log(kucing.suara);
+function kucing(){
+	return 'Meong';
+}
+console.log(kucing());
