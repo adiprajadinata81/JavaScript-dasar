@@ -1,16 +1,3 @@
-const olahraga = 'basketball';
-function namaAtlet(){
-	let atlet = 'lionelMessi';
-	const noMessi = 10;
-	console.log(olahraga);
-
-	if(olahraga === 'basketball'){
-	atlet = 'kobyBryant';
-	const noKobe = 24;
-	console.log(olahraga);
-	}
-	return atlet;
-}
-console.log(namaAtlet());
-console.log(olahraga);
-
+let nama = 'adi';
+let umur = 18;
+console.log(nama + umur);
