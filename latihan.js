@@ -2,5 +2,15 @@ const olahraga = 'basketball';
 function namaAtlet(){
 	let atlet = 'lionelMessi';
 	const noMessi = 10;
-	console.log(olahrag);
+	console.log(olahraga);
+
+	if(olahraga === 'basketball'){
+	atlet = 'kobyBryant';
+	const noKobe = 24;
+	console.log(olahraga);
+	}
+	return atlet;
 }
+console.log(namaAtlet());
+console.log(olahraga);
+
