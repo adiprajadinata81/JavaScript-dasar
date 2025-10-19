@@ -1,3 +1,4 @@
-let nama = 'adi';
-let umur = 18;
-console.log(nama + umur);
+function kucing(){
+	return 'meong';
+};
+console.log(kucing());	
