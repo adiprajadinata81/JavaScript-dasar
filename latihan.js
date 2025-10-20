@@ -1,4 +1,4 @@
 function kucing(){
-	return 'meong';
+	return 'Meong';
 };
-console.log(kucing());	
+console.log(kucing());
