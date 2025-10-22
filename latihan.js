@@ -1,7 +1,4 @@
-let anjing = {
-	kaki: 4,
-	suara: 'gukguk'
+function kucing(){
+	return 'meong';
 };
-console.log(anjing);
-console.log(anjing.kaki);
-console.log(anjing.suara);
+console.log(kucing());
