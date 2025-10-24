@@ -1,4 +1,2 @@
-function kucing(){
-	return 'meong';
-};
-console.log(kucing());
+let kucing = 'meong';
+console.log(kucing);
