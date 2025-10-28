@@ -1,2 +1,2 @@
-const kucing = "meong";
+const kucing = "gukguk";
 console.log(kucing);
