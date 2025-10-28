@@ -1,2 +1,2 @@
-let anjing = 'gukguk';
-console.log(anjing);
+const sudahMenikah = false;
+console.log(sudahMenikah);
