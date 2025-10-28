@@ -1,2 +1,3 @@
+let apakah = 'apakah Sudah Menikah ';
 const sudahMenikah = false;
-console.log(sudahMenikah);
+console.log(apakah + sudahMenikah);
