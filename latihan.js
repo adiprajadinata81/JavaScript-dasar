@@ -1,3 +1,3 @@
 let apakah = 'apakah Sudah Menikah ';
-const sudahMenikah = false;
+const sudahMenikah = 'salah';
 console.log(apakah + sudahMenikah);
