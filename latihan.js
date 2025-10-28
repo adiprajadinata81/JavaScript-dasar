@@ -1,6 +1,8 @@
-const kucing = "gukguk";
-console.log(kucing);
-
-const kucing = "meong";
-console.log(kucing);
-
+const olahraga = 'basketball';
+function namaAtlet(){
+  let atlet = 'lionelMessi';
+  const noMessi = 10;
+  console.log(olahraga);
+};
+console.log(olahraga);
+console.log(namaAtlet);
