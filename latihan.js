@@ -1,3 +1,2 @@
-let apakah = 'apakah Sudah Menikah ';
-const sudahMenikah = 'salah';
-console.log(apakah + sudahMenikah);
+const kucing = "meong";
+console.log(kucing);
