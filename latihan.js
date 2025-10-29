@@ -1,4 +1,15 @@
-function kucing(){
-  return 'meong';
+const kucing = {
+
 };
-console.log(kucing);
+function suara(){
+  return 'meong';
+}
+
+const anjing = {
+
+};
+function suara(){
+  return 'gukguk';
+}
+
+console.log(suara());
