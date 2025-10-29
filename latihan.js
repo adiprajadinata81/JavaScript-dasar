@@ -1,15 +1,13 @@
 const kucing = {
-
+  suara: function(){
+    return 'meong';
+  }
 };
-function suara(){
-  return 'meong';
-}
 
 const anjing = {
-
+  suara: function(){
+    return 'guk guk';
+  }
 };
-function suara(){
-  return 'gukguk';
-}
-
-console.log(suara());
+console.log(anjing.suara());
+console.log(kucing.suara());
