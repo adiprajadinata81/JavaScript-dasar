@@ -1,13 +1,9 @@
-const kucing = {
-  suara: function(){
-    return 'meong';
-  }
-};
+let user = {
+  nama: 'adi',
+  umur: 18
 
-const anjing = {
-  suara: function(){
-    return 'guk guk';
-  }
+function fungsiA() {
+  //isi dari fungsiA
+  console.log(`Nama saya ${user.nama}. Saya berumur ${user.umur} tahun`);
+}
 };
-console.log(anjing.suara());
-console.log(kucing.suara());
