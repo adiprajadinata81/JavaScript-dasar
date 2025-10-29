@@ -1,9 +1,10 @@
 let user = {
   nama: 'adi',
-  umur: 18
-
-function fungsiA() {
-  //isi dari fungsiA
-  console.log(`Nama saya ${user.nama}. Saya berumur ${user.umur} tahun`);
-}
+  umur: 18,
+  fungsiA() {
+    console.log(`Nama saya ${this.nama}. Saya berumur ${this.umur} tahun`);
+  }
 };
+
+user.fungsiA();
+
