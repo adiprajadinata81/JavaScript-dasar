@@ -6,5 +6,8 @@ let user = {
   }
 };
 
+let hobi = 'programming';
+console.log(`Hobi saya ${this.hobi}`);
+
 user.fungsiA();
 
