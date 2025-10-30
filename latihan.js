@@ -1,13 +1,6 @@
-let user = {
-  nama: 'adi',
-  umur: 18,
-  fungsiA() {
-    console.log(`Nama saya ${this.nama}. Saya berumur ${this.umur} tahun`);
-  }
+const olahraga = {
+  apaItu: 'basketball',
+  bola: 'bolaBesar'
 };
-
-let hobi = 'programming';
-console.log(`Hobi saya ${this.hobi}`);
-
-user.fungsiA();
-
+console.log(olahraga.apaItu);
+console.log(olahraga.bola);
