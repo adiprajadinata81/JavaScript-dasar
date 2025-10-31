@@ -1,2 +1,2 @@
-let kucing = 'meong';
-console.log(kucing);
+let nama = "adi";
+console.log(nama);
