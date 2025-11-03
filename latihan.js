@@ -1,3 +1,2 @@
-let kucing = 'meong';
-console.log(kucing);
-
+let atlet = 'lionelMessi';
+console.log(atlet);
