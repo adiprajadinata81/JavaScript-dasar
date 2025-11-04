@@ -10,4 +10,5 @@ function namaAtlet(){
   }
   return atlet;
 }
-console.log(atlet());
+console.log(namaAtlet());
+console.log(olahraga);  
