@@ -1,2 +1,9 @@
-let game = 'throne and liberty';
-console.log(game);
+const olahraga = 'basketball';
+function namaAtlet(){
+  let atlet = 'lionelMessi';
+  const noMessi = 10;
+  console.log(olahraga);
+  if(olahraga === 'basketball'){
+    atlet
+  }
+}
