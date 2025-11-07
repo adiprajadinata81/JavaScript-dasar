@@ -1,2 +1,4 @@
-let namaBuah = ['apel', 'jeruk', 'mangga', 'pisang'];
-console.log(namaBuah[2]);
+function kucing(){
+  return 'meong';
+};
+console.log(kucing());
