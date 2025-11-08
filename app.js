@@ -11,3 +11,17 @@ let urutDariTerbesar = function(a, b) {
 
 console.log(bilangan.sort(urutDariTerkecil)); 
 console.log(bilangan.sort(urutDariTerbesar));
+let isSortedDesc = true;
+
+for (let i = 1; i < bilangan.length; i++) {
+  if (bilangan[i - 1] < bilangan[i]) {
+    isSortedDesc = false;
+    break;
+  }
+}
+
+if (isSortedDesc) {
+  console.log("Array sudah urut dari terbesar ke terkecil");
+} else {
+  console.log("Array TIDAK urut dari terbesar ke terkecil");
+}
