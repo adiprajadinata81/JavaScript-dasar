@@ -1,6 +1,13 @@
-let cemilan = ["kripik singkong", "kripik kentang", "krupuk ikan", "permen", "coklat", "kue"];
-let cemilanGurih = cemilan.slice(0, 1);
-let cemilanManis = cemilan.slice(2);
+let bilangan = [30, 1, 2, 3.5, 10, 100];
 
-console.log(cemilanGurih); 
-console.log(cemilanManis);
+
+let urutDariTerkecil = function(a, b) {
+  return a - b;
+};
+
+let urutDariTerbesar = function(a, b) {
+  return b - a;
+};
+
+console.log(bilangan.sort(urutDariTerkecil)); 
+console.log(bilangan.sort(urutDariTerbesar));
