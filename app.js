@@ -9,3 +9,9 @@ let urutanTerbesar = function(a, b){
     return b - a;
 };
 console.log(bilangan.sort(urutanTerbesar));
+
+let bilanganBerurut = [1,2,3,4,5,6,7,8,9,10];
+bilanganBerurut.sort(function(x, y){
+    return y - x;
+});
+console.log(bilanganBerurut);
