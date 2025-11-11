@@ -1,1 +1,2 @@
-console.log('meong');
+let kucing = 'meong';
+console.log(kucing);
