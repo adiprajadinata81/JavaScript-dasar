@@ -10,3 +10,4 @@ function namaAtlet(){
     };
     return atlet;
 };
+console.log(namaAtlet());
