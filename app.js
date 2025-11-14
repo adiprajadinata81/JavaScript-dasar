@@ -8,4 +8,5 @@ function namaAtlet(){
         const noKobe = 24;
         console.log(olahraga);
     };
+    return atlet;
 };
