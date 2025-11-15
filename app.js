@@ -11,3 +11,4 @@ function namaAtlet(){
     return atlet;
 };
 console.log(namaAtlet());
+console.log(olahraga);
