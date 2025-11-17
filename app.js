@@ -1,2 +1,2 @@
-let name = 'alonso';
-console.log(name);
+let nama = 'strol';
+console.log(nama);
