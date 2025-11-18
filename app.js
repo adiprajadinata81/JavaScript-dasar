@@ -1,2 +1,2 @@
-let nama = 'strol';
-console.log(nama);
+const olahraga = 'basketball';
+console.log(olahraga);
