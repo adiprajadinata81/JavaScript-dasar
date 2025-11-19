@@ -1,2 +1,4 @@
 const olahraga = 'basketball';
-console.log(olahraga);
+function namaAtlet(){
+    
+}
