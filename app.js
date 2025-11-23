@@ -3,6 +3,6 @@ function namaAtlet(){
     let atlet = 'lionelMessi';
     const noMessi = 10;
     if(olahraga === 'basketball'){
-        
+    atlet = 'kobeBraynt';
     }
 }
