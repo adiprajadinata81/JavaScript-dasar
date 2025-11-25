@@ -4,5 +4,6 @@ function namaAtlet(){
     const noMessi = 10;
     if(olahraga === 'basketball'){
     atlet = 'kobeBraynt';
+    CONST 
     }
 }
