@@ -6,5 +6,7 @@ function namaAtlet(){
     if(olahraga === 'basketball'){
     atlet = 'kobeBraynt';
     const noKobe = 24;
+    console.log(olahraga);
     }
+    
 }
