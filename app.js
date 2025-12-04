@@ -7,6 +7,7 @@ function namaAtlet(){
     atlet = 'kobeBraynt';
     const noKobe = 24;
     console.log(olahraga);
-    }
+    };
     return atlet;
-}
+};
+console.log(namaAtlet());
