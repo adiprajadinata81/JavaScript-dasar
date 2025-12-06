@@ -1,1 +1,2 @@
-console.log('hello');
+const userId = "1618033988";
+let userName = "Leeroy Jenkins";
