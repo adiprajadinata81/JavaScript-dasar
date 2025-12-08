@@ -1,2 +1,2 @@
-let guardianTales = 'garam';
-console.log(guardianTales);
+const firstName = 'albert';
+const favoriteColor = 'red';
