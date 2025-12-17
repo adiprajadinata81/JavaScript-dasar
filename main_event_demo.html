@@ -4,25 +4,25 @@ if (Notification.permission !== "granted") {
   Notification.requestPermission();
 }
 
-let alreadyNotified = false;
+let sudahMuncul = false;
 
 setInterval(() => {
   const now = new Date();
 
-  const hour = now.getHours();
-  const minute = now.getMinutes();
+  const jam = now.getHours();    // 0–23
+  const menit = now.getMinutes(); // 0–59
 
-  if (hour === 14 && minute === 0 && !alreadyNotified) {
+  if (jam === 13 && menit === 23 && !sudahMuncul) {
     new Notification("⏰ Pengingat", {
-      body: "Sekarang jam 14.00"
+      body: "Sekarang jam 13:23"
     });
 
-    alreadyNotified = true; // agar tidak muncul berkali-kali
+    sudahMuncul = true; // agar tidak muncul berulang
   }
 
-  // Reset flag setelah lewat jam 14
-  if (hour !== 14) {
-    alreadyNotified = false;
+  // reset setelah lewat jam 13
+  if (jam !== 13) {
+    sudahMuncul = false;
   }
 
 }, 1000);
