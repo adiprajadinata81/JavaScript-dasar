@@ -9,7 +9,7 @@
   <h2>⏰ Pengingat Waktu</h2>
   <h3 id="clock">--:--:--</h3>
 
-  <p>Pengingat disetel otomatis jam <b>13:23</b></p>
+  <p>Pengingat disetel otomatis jam <b>14.00</b></p>
 
   <script>
     let sudahMuncul = false;
@@ -28,13 +28,13 @@
         detik.toString().padStart(2, '0');
 
       // kondisi pengingat
-      if (jam === 13 && menit === 40 && !sudahMuncul) {
-        alert("⏰ Pengingat!\nSekarang jam 13:23");
+      if (jam === 14 && menit === 00 && !sudahMuncul) {
+        alert("⏰ Pengingat!\nSekarang jam 14.00");
         sudahMuncul = true;
       }
 
       // reset agar bisa aktif lagi besok
-      if (jam !== 13) {
+      if (jam !== 14) {
         sudahMuncul = false;
       }
 
