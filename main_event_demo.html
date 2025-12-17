@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Popup Pengingat</title>
+</head>
+<body>
+
+<button onclick="setReminder()">Set Pengingat</button>
+
+<script>
+function setReminder() {
+  alert("Pengingat akan muncul dalam 5 detik");
+
+  setTimeout(function () {
+    alert("⏰ Waktunya pengingat!");
+  }, 5000); // 5000 ms = 5 detik
+}
+</script>
+
+</body>
+</html>
