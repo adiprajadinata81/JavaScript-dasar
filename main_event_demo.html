@@ -1,21 +1,29 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Popup Pengingat</title>
-</head>
-<body>
-
-<button onclick="setReminder()">Set Pengingat</button>
-
 <script>
-function setReminder() {
-  alert("Pengingat akan muncul dalam 5 detik");
-
-  setTimeout(function () {
-    alert("⏰ Waktunya pengingat!");
-  }, 5000); // 5000 ms = 5 detik
+// Minta izin notifikasi
+if (Notification.permission !== "granted") {
+  Notification.requestPermission();
 }
-</script>
 
-</body>
-</html>
+let alreadyNotified = false;
+
+setInterval(() => {
+  const now = new Date();
+
+  const hour = now.getHours();
+  const minute = now.getMinutes();
+
+  if (hour === 14 && minute === 0 && !alreadyNotified) {
+    new Notification("⏰ Pengingat", {
+      body: "Sekarang jam 14.00"
+    });
+
+    alreadyNotified = true; // agar tidak muncul berkali-kali
+  }
+
+  // Reset flag setelah lewat jam 14
+  if (hour !== 14) {
+    alreadyNotified = false;
+  }
+
+}, 1000);
+</script>
