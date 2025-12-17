@@ -1,45 +1,32 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <title>Pengingat Waktu</title>
-</head>
-<body>
+<script>
+  const pengingat = [
+    { jam: 14, menit: 0, sudah: false },
+    { jam: 16, menit: 0, sudah: false }
+  ];
 
-  <h2>⏰ Pengingat Waktu</h2>
-  <h3 id="clock">--:--:--</h3>
+  setInterval(() => {
+    const now = new Date();
+    const jam = now.getHours();
+    const menit = now.getMinutes();
+    const detik = now.getSeconds();
 
-  <p>Pengingat disetel otomatis jam <b>14.00</b></p>
+    // tampilkan jam
+    document.getElementById("clock").innerText =
+      jam.toString().padStart(2, '0') + ":" +
+      menit.toString().padStart(2, '0') + ":" +
+      detik.toString().padStart(2, '0');
 
-  <script>
-    let sudahMuncul = false;
-
-    setInterval(() => {
-      const now = new Date();
-
-      const jam = now.getHours();
-      const menit = now.getMinutes();
-      const detik = now.getSeconds();
-
-      // tampilkan jam berjalan
-      document.getElementById("clock").innerText =
-        jam.toString().padStart(2, '0') + ":" +
-        menit.toString().padStart(2, '0') + ":" +
-        detik.toString().padStart(2, '0');
-
-      // kondisi pengingat
-      if (jam === 14 && menit === 00 && !sudahMuncul) {
-        alert("⏰ Pengingat!\nSekarang jam 14.00");
-        sudahMuncul = true;
+    pengingat.forEach(p => {
+      if (jam === p.jam && menit === p.menit && !p.sudah) {
+        alert(`⏰ Pengingat!\nSekarang jam ${p.jam}.${p.menit.toString().padStart(2,'0')}`);
+        p.sudah = true;
       }
 
-      // reset agar bisa aktif lagi besok
-      if (jam !== 14) {
-        sudahMuncul = false;
+      // reset harian
+      if (jam !== p.jam) {
+        p.sudah = false;
       }
+    });
 
-    }, 1000);
-  </script>
-
-</body>
-</html>
+  }, 1000);
+</script>
