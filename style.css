@@ -1,0 +1,266 @@
+.font-teko {
+  font-family: 'Teko', sans-serif;
+}
+
+.item-bg {
+  background-size: 120%;
+  background-position: left top;
+  transition: background-size 0.3s ease-in-out;
+  background-repeat: no-repeat;
+}
+
+.item {
+  position: relative;
+  border-radius: 0;
+  overflow: visible;
+  transition: all 0.3s ease-in-out;
+}
+
+.item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+}
+
+.item-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  color: white;
+}
+
+.item-title {
+  font-weight: bold;
+}
+
+.item-caption {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.item-title,
+.item-caption,
+.item-food p {
+  background: linear-gradient(178deg, rgba(65, 41, 90, 0), rgba(57, 27, 127, 0.88), rgba(132, 94, 194, 0));
+}
+
+.item-foods {
+  position: absolute;
+  font-size: 120%;
+  top: 90px;
+  width: 100%;
+  justify-content:center;
+  /*left: 2rem;*/
+  text-align: center;
+  display: flex;
+  align-items: center;
+  color: #d4af37;
+  transition: transform 0.12s ease-in-out;
+}
+
+.item-food {
+  max-width: 8em;
+  position: relative;
+  text-align: center;
+  margin-right: 1em;
+}
+
+.item-food img {
+  margin: 0 auto;
+  border-radius: 4%;
+  border: 3px solid #ae8b7b;
+  margin-bottom: 4px;
+  position:relative;
+  z-index:2;
+  background: url("https://gameslantern.com/images/sites/throneandliberty/buildeditor/Common/IMG_Itembg/BG_ItemGrade_04.webp");
+}
+
+.item-overlay {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(169deg, rgba(65, 41, 90, 0.44), rgba(174, 130, 67, 0.20));
+  transition: background 0.3s ease-in-out;
+}
+
+.item:hover .item-overlay {
+  background: linear-gradient(169deg, rgba(35, 21, 40, 0.84), rgba(74, 30, 27, 0.84));
+}
+
+hr {
+  margin: 0;
+}
+
+.title-copy {
+  right: auto;
+  left: 1em;
+  opacity: .12;
+  background-blend-mode: initial;
+  filter: blur(2px);
+  font-size: 6rem;
+  top: .2em;
+}
+
+body {
+  background-image: url("https://i.imgur.com/f9OcU99.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.item-shadow {
+  box-shadow: 0 8px 24px 12px #d69415ab;
+}
+
+.item-food .tooltip {
+  visibility: hidden;
+  width: 20em;
+  background-color: rgba(24, 14, 64, 0.88);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 11;
+  bottom: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: pre-wrap;
+}
+
+.item-food:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.item-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px 4px;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-color: rgba(8, 2, 12, 0.8);
+  pointer-events: none;
+}
+
+@media (min-width: 1936px) {
+  .container {
+    max-width: 2136px !important;
+  }
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.item:before {
+  content: "";
+  position: absolute;
+  height: calc(100% + 16px);
+  width: calc(100% + 16px);
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 0 6px #000);
+  background-image: url(data:image/webp;base64,UklGRpACAABXRUJQVlA4WAoAAAAQAAAAqAAAiwAAQUxQSE8AAAABP0CQbRsaSi/yiIiwAzYBAKTBicBLFCLwUcOh/yFzl4j+T0CZqgGgCF2myhcKLGlYJrVM9UefvExumez/rt2vyCJZvp0kWqSFtvz331MZAFZQOCAaAgAAsBEAnQEqqQCMAD4xFodDoiEJiBABglnbugfyRTiGPRgh05/VcEl/QD3j7u3/YD4QztiB3B3d0/0izx7WkhhvR7/ueJ1B3LNWM/7xm8d/591tv3r0UhCPbpS3OhpsLvIV0tzpubTEG1bnTQJe55vIS3Om5r3xX2KkmtW50SXga6Utvxnvae0aqzpn/pr/xm3TPW/EovYAAP7+/g9u//81gf/6qSCV11e0yIJz00/E9VLBw1mPpC/5tyKrGvIqRaVvc0ajFGxwwFZEVTn2pXGof/9lz18tKVBJ21WiuRDHEMjzHj4sQIoDTuxNnY16KiHZRluZu97TpPr2me/ao0YnOLckwmqOYJoFNBFe0mZeuSo0FKvXIOS8BaPs9O+RJChJmgz6viqFuyHxi5lBqjg6hcjYyMszUmoosuiPrRP4Nf2GrxMLUtfKfF4gtXdOs87hBF6A4yT6dp/+bq42FzDnaZBwuJIV5+jhEb/iY8xZ+f/wb68TR22K90sH9Jf64q4S8DpotjE15WrZYgkq+FIXLtRfGltiC/8DLNgBvmZA24VS5GjKplZZgdpBSZVwCNJ9Lnq2XWmLjbaxqf7O0s8RwQq5USHHG+4zrgHEJ8z8It1Qmx5InmXMdnd8lGb7xsb/o1WQ7UWplu0D0asXwe8dVwd3GvZW2My/cQD4aWxO8JbNJf/jbX6D4Sdz8t4NtU3l4AIMxQs3GAAAAA==);
+  background-position: 100% 0;
+  right: -4px;
+  top: -3px;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.item:hover::before {
+  right: -6px;
+  top: -8px;
+}
+
+.item::after {
+  content: "";
+  position: absolute;
+  height: calc(100% + 16px);
+  width: calc(100% + 16px);
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 0 6px #000);
+  background-position: 0 100%;
+  left: -4px;
+  bottom: -4px;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+  background-image: url(data:image/webp;base64,UklGRiQCAABXRUJQVlA4WAoAAAAQAAAAqAAAiwAAQUxQSFMAAAABT6CQbQQ4do/HZSQXESEYPQvYxraVCJeMGuiGAshJKekVjK37RvR/AkAW+fffU9lC+2XChorLtPvxw4suk14m++RTDMsEvkyjs4MlCVO1UzJTAgBWUDggqgEAALAQAJ0BKqkAjAA+MRiLQ6IhoRMUACADBLS3cLmggIADZ/+gBzvP9N/UnWAPQA/UDrWQGR3/1ZDkYBrv/qw4wm+5F7pmv1REi49yULb7gqy8loW32k5fQTzO9GELb7TIW+4L2/VB3zc+bciWhbfaOe5UYeaCtsI2JuwQphFD+xl4q6YEyAP07iRmdChTqwAA/v8rB//8IyK6s8xmAzuC6+P/sbe/9+vdR/zJ+CB+KIQGzR3s9DKHM6Nc3mNcd99AbMIcXxZ1wMkBnwASPx41mNIG9euEUQbUiGWgknQOvcigfdUlkAv//4XEEzI+Yi3/OF9sH763whJjbAn9DUKngaruqzF25Vdgt9JROIX8xMYXtl/0V64slJ1+bDErgP+t3Y+Tf+1v/OrcvBv/kQ3x5cmGXO8GfgDw2BrJyxku0enKyro3v7iUK1V5sOf/ygJBTnPznQoByGk9uFa/E2A1GdPl0iKSQlusMJae4DkxnOm1Q2ripK34hVHoeJUMdmwj7KEFQ+oIrsmke/h6UFSCw1fTR9r2A3ilsd+jv4Y+DTi5ezcEWjzHGBsEAA==);
+}
+
+.item:hover::after {
+  left: 2px;
+  bottom: 2px;
+}
+
+/* Targeting the second and third food items using :nth-child */
+.item-foods .item-food:nth-child(2),
+.item-foods .item-food:nth-child(3) {
+  font-size: 0.75rem;
+}
+
+.item-food:nth-child(2) img {
+  border-width: 2px;
+}
+.item-food:nth-child(2)::after,
+.item-food:nth-child(3)::after {
+top: 3.2em;
+  width: 1.6em;
+}
+
+.item-info .last-row {
+  grid-column: span 2;
+}
+
+/* Custom CSS for hover effect */
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
+}
+
+/* Custom CSS for glow effect */
+.favorite-button {
+  filter: drop-shadow(0 4px 4px rgba(252, 211, 77, 0.24));
+  transition: filter 0.3s ease-in-out;
+  border: 1px solid #AE8B7B;
+}
+.favorite-button:hover {
+  filter: drop-shadow(0 0 12px rgba(252, 211, 77, 0.8));
+}
+
+.item-bg {
+  background-size: cover;
+  background-position: top left;
+  transition: transform .24s ease-in-out;
+  height: 100%;
+}
+
+.item:hover .item-bg {
+  transform: scale(1.24) translateY(12%)translateX(10%);
+}
+.item-food::after {
+content: "";
+  box-shadow: -.8em 0.1em 0.8em 1em #d69415ab;
+  position: absolute;
+  top: 4em;
+  width: 2em;
+}
+.xl\:grid-cols-6 .xl\:text-6xl {
+    font-size: 2.4rem;
+}
+
+.xl\:grid-cols-6 .item-foods {
+  transform: scale(.8);
+}
+
