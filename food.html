@@ -1,113 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>food up</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Food Up</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+/* ==== CSS KAMU (DIRAPIKAN) ==== */
+.font-teko { font-family: 'Teko', sans-serif; }
+
+.item-bg {
+  background-size: cover;
+  background-position: top left;
+  transition: transform .24s ease-in-out;
+  height: 100%;
+}
+.item:hover .item-bg {
+  transform: scale(1.24) translate(10%,12%);
+}
+
+.item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(212,175,55,.8);
+}
+
+body {
+  background: url("https://i.imgur.com/f9OcU99.jpeg") no-repeat center/cover fixed;
+}
+body::before {
+  content:"";
+  position:fixed;
+  inset:0;
+  background:rgba(8,2,12,.8);
+  pointer-events:none;
+}
+</style>
 </head>
-<body>
-    <div class="text-white p-4 sm:p-8 min-h-screen font-sans relative">
-  <div class="container mx-auto">
-    <!-- Title Row with CTA Button and Grid Buttons -->
-    <div class="flex flex-col sm:flex-row justify-between items-center mb-8">
-      <!-- Page Title -->
-      <h1 class="text-2xl sm:text-4xl xl:text-6xl font-bold font-teko text-violet-400">
-        <button onclick="renderItems()"> ⚔️ Bosses & <span class="text-amber-400">Bonus food<sub>🥧</sub></span></button>
-      </h1>
 
-      <!-- Call to Action Button -->
-      <a href="https://www.youtube.com/watch?v=HMgDjgf273g" target="_blank" class="ml-4 rounded bg-[#ff0000] px-4 py-1 items-center font-medium leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg border-b-4 border-red-800 transform hover:-translate-y-1">
-        <span class="inl3ine-flex items-center">
-          <i class="fab fa-youtube w-4 h-4 mr-1 text-lg"></i>
-          <b> @emwinn</b>
-        </span>
-        <small class="font-semibold sm:block"> watch tutorial 🡵</small>
-      </a>
+<body class="text-white">
+<div class="container mx-auto p-4 relative z-10">
 
-      <!-- Button Group for Grid Layout -->
-      <div class="flex justify-center ml-4 hidden block sm:flex">
-        <button onclick="changeGridLayout(1, 1, 2, 2)" class="bg-gray-700 hover:bg-purple-800 text-white font-bold py-2 px-4 mx-1 rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-500">
-          Small
-        </button>
-        <button onclick="changeGridLayout(1, 2, 3, 3)" class="hidden md:block bg-gray-700 hover:bg-purple-800 text-white font-bold py-2 px-4 mx-1 rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-500">
-          Medium
-        </button>
-        <button onclick="changeGridLayout(2, 3, 4, 4)" class="hidden lg:block bg-gray-700 hover:bg-purple-800 text-white font-bold py-2 px-4 mx-1 rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-500">
-          Large
-        </button>
-        <button onclick="changeGridLayout(1, 2, 3, 6)" class="hidden xl:block bg-gray-700 hover:bg-purple-800 text-white font-bold py-2 px-4 mx-1 rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-500">
-          XL-6 Items
-        </button>
-        <button onclick="resetGridLayout()" class="bg-violet-700 hover:bg-purple-800 text-white font-bold py-2 px-4 mx-1 rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-500">
-          ᎒᎒᎒ Default
-        </button>
-      </div>
-    </div>
+<input id="searchBar" oninput="searchItems()" placeholder="Search..."
+class="w-full mb-4 p-2 bg-gray-800 border border-amber-500">
 
-    <!-- Flex Container for Filters and Search -->
-    <div class="flex flex-wrap gap-4 justify-between items-center mb-8">
-      <!-- Filter Buttons for Group -->
-      <div class="flex gap-2 sm:gap-4 flex-wrap md:flex-nowrap">
-        <button onclick="filterItems('all', 'all')" class="bg-gray-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-500" style="line-height:1">
-          All
-        </button>
-          <button onclick="showFavorites()" class="bg-rose-700 hover:bg-fuchsia-800 text-white font-bold text-xs py-1 px-2 sm:px-4 sm:py-2 sm:text-sm rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-500">
-    <i class="fas fa-star text-amber-500"></i> Favorites
-  </button>
-        <button onclick="filterItems('Demon', 'all')" class="bg-purple-700 hover:bg-purple-800 text-white font-bold py-1 px-2 text-xs rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-600 sm:px-4 sm:py-2 sm:text-sm">
-          Demon
-        </button>
-        <button onclick="filterItems('Undead', 'all')" class="bg-purple-700 hover:bg-purple-800 text-white font-bold py-1 px-2 text-xs rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-600 sm:px-4 sm:py-2 sm:text-sm">
-          Undead
-        </button>
-        <button onclick="filterItems('Humanoid', 'all')" class="bg-purple-700 hover:bg-purple-800 text-white font-bold py-1 px-2 text-xs rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-600 sm:px-4 sm:py-2 sm:text-sm">
-          Humanoid
-        </button>
-        <button onclick="filterItems('Wildkin', 'all')" class="bg-purple-700 hover:bg-purple-800 text-white font-bold py-1 px-2 text-xs rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-600 sm:px-4 sm:py-2 sm:text-sm">
-          Wildkin
-        </button>
-        <button onclick="filterItems('Construct', 'all')" class="bg-purple-700 hover:bg-purple-800 text-white font-bold py-1 px-2 text-xs rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-600 sm:px-4 sm:py-2 sm:text-sm">
-          Construct
-        </button>
-      </div>
-   <div class="p-4">
-        <label for="show-favorites" class="flex items-center space-x-2">
-            <input type="checkbox" id="show-favorites" class="form-checkbox h-5 w-5 text-green-500">
-            <span>Start w/ favorites</span>
-        </label>
-    </div>
-      <!-- Search Bar -->
-      <div class="flex-1 mx-4">
-        <input type="text" id="searchBar" oninput="searchItems()" placeholder="Search..." class="bg-gray-800 text-white border border-amber-500 rounded-sm py-2 px-4 w-full focus:outline-none focus:border-purple-800 transition-all duration-300">
-      </div>
+<label class="flex gap-2 mb-4">
+<input type="checkbox" id="show-favorites">
+<span>Start w/ favorites</span>
+</label>
 
-      <!-- Filter Buttons for Rank -->
-      <div class="flex gap-2 md:gap-4 flex-wrap md:flex-nowrap">
-        <button onclick="filterItems('all', 'Boss')" class="bg-purple-700 hover:bg-purple-800 text-white font-bold py-1 px-2 text-xs rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-600 sm:px-4 sm:py-2 sm:text-sm">
-          WorldBoss
-        </button>
-        <button onclick="filterItems('all', 'Archboss')" class="bg-purple-700 hover:bg-purple-800 text-white font-bold py-1 px-2 text-xs rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-600 sm:px-4 sm:py-2 sm:text-sm">
-          Archboss
-        </button>
-        <button onclick="filterItems('all', 'DungeonBoss')" class="bg-purple-700 hover:bg-purple-800 text-white font-bold py-1 px-2 text-xs rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-600 sm:px-4 sm:py-2 sm:text-sm">
-          DungeonBoss
-        </button>
-        <button onclick="filterItems('all', 'TowerGate')" class="bg-purple-700 hover:bg-purple-800 text-white font-bold py-1 px-2 text-xs rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-600 sm:px-4 sm:py-2 sm:text-sm">
-          Tower / Gate
-        </button>
-        <button onclick="filterItems('all', 'all')" class="bg-gray-700 hover:bg-purple-800 text-white font-bold rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-500 sm:px-4 py-1 px-2 text-xs sm:py-2 sm:text-sm">
-          All
-        </button>
-      </div>
-    </div>
+<div id="item-grid"
+class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
 
-    <!-- Item Grid -->
-    <div id="item-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-      <!-- Items will be dynamically inserted here -->
-    </div>
-  </div>
-  <p class="mt-6 mb-4 text-center text-gray-200">Made with 💜 by <a href="https://www.youtube.com/@emwinn" target="_blank">@emwinn</a><br>Winterfox in game <br><small>- eminoe on reddit</small>.</p>
 </div>
+
+<script>
+/* ==== UTIL ==== */
+function escapeString(str){
+  return str.toLowerCase().replace(/[^a-z0-9]+/g,'-');
+}
+function getUniqueKey(item){
+  return `${escapeString(item.title)}-${escapeString(item.group)}-${escapeString(item.rank)}`;
+}
+function normalizeFoodIds(item){
+  if(item.foodIds) return item.foodIds;
+  if(item.foodId) return [item.foodId];
+  return [];
+}
+
+/* ==== FAVORITE ==== */
+function toggleFavorite(id,e){
+  const key=`favorite-${id}`;
+  const val=localStorage.getItem(key)==='true';
+  localStorage.setItem(key,!val);
+  renderItems();
+}
+
+/* ==== RENDER ==== */
+function getFoodElements(item){
+  return normalizeFoodIds(item).map(id=>{
+    const f=foodItems.find(x=>x.id===id);
+    return `
+    <div class="item-food text-center">
+      <img src="${f.image}" class="w-20 mx-auto">
+      <p>${f.name}</p>
+    </div>`;
+  }).join('');
+}
+
+function createItemCard(item,id){
+return `
+<div class="item bg-gray-800 p-4 relative">
+<div class="h-48 relative overflow-hidden">
+  <div class="item-bg" style="background-image:url('${item.image}')"></div>
+</div>
+
+<h3 class="font-teko text-3xl text-amber-400">${item.raceName}</h3>
+<p class="text-sm">${item.title}</p>
+
+<div class="flex gap-2 mt-2">${getFoodElements(item)}</div>
+
+<button onclick="toggleFavorite('${id}',event)"
+class="absolute top-2 right-2">
+<i class="fas fa-star ${localStorage.getItem('favorite-'+id)==='true'
+?'text-amber-500':'text-gray-500'}"></i>
+</button>
+</div>`;
+}
+
+function renderItems(){
+  const grid=document.getElementById("item-grid");
+  grid.innerHTML="";
+  items.forEach(item=>{
+    const id=getUniqueKey(item);
+    grid.insertAdjacentHTML("beforeend",createItemCard(item,id));
+  });
+}
+
+/* ==== SEARCH ==== */
+function searchItems(){
+  const t=searchBar.value.toLowerCase();
+  document.querySelectorAll("#item-grid .item").forEach(el=>{
+    el.style.display=el.innerText.toLowerCase().includes(t)?"":"none";
+  });
+}
+
+/* ==== INIT ==== */
+renderItems();
+</script>
 </body>
 </html>
