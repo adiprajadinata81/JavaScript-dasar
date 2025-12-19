@@ -1,0 +1,102 @@
+<div class="text-white p-4 sm:p-8 min-h-screen font-sans relative">
+  <div class="container mx-auto">
+    <!-- Title Row with CTA Button and Grid Buttons -->
+    <div class="flex flex-col sm:flex-row justify-between items-center mb-8">
+      <!-- Page Title -->
+      <h1 class="text-2xl sm:text-4xl xl:text-6xl font-bold font-teko text-violet-400">
+        <button onclick="renderItems()"> ⚔️ Bosses & <span class="text-amber-400">Bonus food<sub>🥧</sub></span></button>
+      </h1>
+
+      <!-- Call to Action Button -->
+      <a href="https://www.youtube.com/watch?v=HMgDjgf273g" target="_blank" class="ml-4 rounded bg-[#ff0000] px-4 py-1 items-center font-medium leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg border-b-4 border-red-800 transform hover:-translate-y-1">
+        <span class="inl3ine-flex items-center">
+          <i class="fab fa-youtube w-4 h-4 mr-1 text-lg"></i>
+          <b> @emwinn</b>
+        </span>
+        <small class="font-semibold sm:block"> watch tutorial 🡵</small>
+      </a>
+
+      <!-- Button Group for Grid Layout -->
+      <div class="flex justify-center ml-4 hidden block sm:flex">
+        <button onclick="changeGridLayout(1, 1, 2, 2)" class="bg-gray-700 hover:bg-purple-800 text-white font-bold py-2 px-4 mx-1 rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-500">
+          Small
+        </button>
+        <button onclick="changeGridLayout(1, 2, 3, 3)" class="hidden md:block bg-gray-700 hover:bg-purple-800 text-white font-bold py-2 px-4 mx-1 rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-500">
+          Medium
+        </button>
+        <button onclick="changeGridLayout(2, 3, 4, 4)" class="hidden lg:block bg-gray-700 hover:bg-purple-800 text-white font-bold py-2 px-4 mx-1 rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-500">
+          Large
+        </button>
+        <button onclick="changeGridLayout(1, 2, 3, 6)" class="hidden xl:block bg-gray-700 hover:bg-purple-800 text-white font-bold py-2 px-4 mx-1 rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-500">
+          XL-6 Items
+        </button>
+        <button onclick="resetGridLayout()" class="bg-violet-700 hover:bg-purple-800 text-white font-bold py-2 px-4 mx-1 rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-500">
+          ᎒᎒᎒ Default
+        </button>
+      </div>
+    </div>
+
+    <!-- Flex Container for Filters and Search -->
+    <div class="flex flex-wrap gap-4 justify-between items-center mb-8">
+      <!-- Filter Buttons for Group -->
+      <div class="flex gap-2 sm:gap-4 flex-wrap md:flex-nowrap">
+        <button onclick="filterItems('all', 'all')" class="bg-gray-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-500" style="line-height:1">
+          All
+        </button>
+          <button onclick="showFavorites()" class="bg-rose-700 hover:bg-fuchsia-800 text-white font-bold text-xs py-1 px-2 sm:px-4 sm:py-2 sm:text-sm rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-500">
+    <i class="fas fa-star text-amber-500"></i> Favorites
+  </button>
+        <button onclick="filterItems('Demon', 'all')" class="bg-purple-700 hover:bg-purple-800 text-white font-bold py-1 px-2 text-xs rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-600 sm:px-4 sm:py-2 sm:text-sm">
+          Demon
+        </button>
+        <button onclick="filterItems('Undead', 'all')" class="bg-purple-700 hover:bg-purple-800 text-white font-bold py-1 px-2 text-xs rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-600 sm:px-4 sm:py-2 sm:text-sm">
+          Undead
+        </button>
+        <button onclick="filterItems('Humanoid', 'all')" class="bg-purple-700 hover:bg-purple-800 text-white font-bold py-1 px-2 text-xs rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-600 sm:px-4 sm:py-2 sm:text-sm">
+          Humanoid
+        </button>
+        <button onclick="filterItems('Wildkin', 'all')" class="bg-purple-700 hover:bg-purple-800 text-white font-bold py-1 px-2 text-xs rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-600 sm:px-4 sm:py-2 sm:text-sm">
+          Wildkin
+        </button>
+        <button onclick="filterItems('Construct', 'all')" class="bg-purple-700 hover:bg-purple-800 text-white font-bold py-1 px-2 text-xs rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-600 sm:px-4 sm:py-2 sm:text-sm">
+          Construct
+        </button>
+      </div>
+   <div class="p-4">
+        <label for="show-favorites" class="flex items-center space-x-2">
+            <input type="checkbox" id="show-favorites" class="form-checkbox h-5 w-5 text-green-500">
+            <span>Start w/ favorites</span>
+        </label>
+    </div>
+      <!-- Search Bar -->
+      <div class="flex-1 mx-4">
+        <input type="text" id="searchBar" oninput="searchItems()" placeholder="Search..." class="bg-gray-800 text-white border border-amber-500 rounded-sm py-2 px-4 w-full focus:outline-none focus:border-purple-800 transition-all duration-300">
+      </div>
+
+      <!-- Filter Buttons for Rank -->
+      <div class="flex gap-2 md:gap-4 flex-wrap md:flex-nowrap">
+        <button onclick="filterItems('all', 'Boss')" class="bg-purple-700 hover:bg-purple-800 text-white font-bold py-1 px-2 text-xs rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-600 sm:px-4 sm:py-2 sm:text-sm">
+          WorldBoss
+        </button>
+        <button onclick="filterItems('all', 'Archboss')" class="bg-purple-700 hover:bg-purple-800 text-white font-bold py-1 px-2 text-xs rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-600 sm:px-4 sm:py-2 sm:text-sm">
+          Archboss
+        </button>
+        <button onclick="filterItems('all', 'DungeonBoss')" class="bg-purple-700 hover:bg-purple-800 text-white font-bold py-1 px-2 text-xs rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-600 sm:px-4 sm:py-2 sm:text-sm">
+          DungeonBoss
+        </button>
+        <button onclick="filterItems('all', 'TowerGate')" class="bg-purple-700 hover:bg-purple-800 text-white font-bold py-1 px-2 text-xs rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-600 sm:px-4 sm:py-2 sm:text-sm">
+          Tower / Gate
+        </button>
+        <button onclick="filterItems('all', 'all')" class="bg-gray-700 hover:bg-purple-800 text-white font-bold rounded-sm transition-all duration-300 hover:scale-105 border-2 border-amber-500 sm:px-4 py-1 px-2 text-xs sm:py-2 sm:text-sm">
+          All
+        </button>
+      </div>
+    </div>
+
+    <!-- Item Grid -->
+    <div id="item-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <!-- Items will be dynamically inserted here -->
+    </div>
+  </div>
+  <p class="mt-6 mb-4 text-center text-gray-200">Made with 💜 by <a href="https://www.youtube.com/@emwinn" target="_blank">@emwinn</a><br>Winterfox in game <br><small>- eminoe on reddit</small>.</p>
+</div>
