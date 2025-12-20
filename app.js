@@ -1,2 +1,2 @@
-let hello = 'hello world';
-console.log(hello);
+let link = 'discord.com/invite/motionime';
+console.log(link);
