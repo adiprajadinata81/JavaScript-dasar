@@ -1,2 +1,2 @@
-let variabel = 'HEELO WORLD';
-console.log(variabel);
+let variabBel = 'HEELO WORLD';
+console.log(variabBel);
